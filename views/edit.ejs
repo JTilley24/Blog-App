@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.blogNumber) { %>
+
+    <form action="/blog/edit/submit/<%= blogNumber %>" method="POST">
+        <table>
+            <tr>
+            <td>Name</td>
+            <td><input type="text" name="userNameEdit" value="<%= blogsList[blogNumber].name %>"></td>
+            </tr>
+            <tr>
+            <td>Title</td>
+            <td><input type="text" name="blogTitleEdit" value="<%= blogsList[blogNumber].title %>"></td>
+            </tr>
+            <tr>
+            <td>Blog</td>
+            <td><input type="text" name="blogTextEdit" value="<%= blogsList[blogNumber].blogText %>"></td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="submit" value="Save" ></td>
+            </tr>
+        </table>
+    </form>
+<% } else { %>
+    <h1>No Blog to Show</h1>
+<% } %> 
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.blogNumber) { %>
+    <h2>Are you sure?</h2>
+    <h3>Delete <%= blogsList[blogNumber].title %> </h3>
+    <form action="/blog/delete/submit/<%= blogNumber %>" method="POST">
+        <table>
+            <tr>
+                <td><input type="submit" name="YES" value="YES"></td>
+                <td><input type="submit" name="NO" value="NO"></td>
+            </tr>
+        </table>
+    </form>
+<% } else { %>
+    <h1>No Blog to Show</h1>
+<% } %> 
+<%- include("partials/footer.ejs") %>

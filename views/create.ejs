@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/submit" method="POST">
+    <table>
+        <tr>
+        <td>Name</td>
+        <td><input type="text" name="userName" placeholder="Name"></td>
+        </tr>
+        <tr>
+        <td>Title</td>
+        <td><input type="text" name="blogTitle" placeholder="Title"></td>
+        </tr>
+        <tr>
+        <td>Blog</td>
+        <td><input type="text" name="blogText" placeholder="Blog"></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="submit" value="Save" ></td>
+        </tr>
+    </table>
+</form>
+
+<%- include("partials/footer.ejs") %>

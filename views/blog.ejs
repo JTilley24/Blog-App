@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.blogNumber) { %>
+    <h1><%= blogsList[blogNumber].title %> </h1>
+    <h2><%= blogsList[blogNumber].name %> </h2>
+    <p><%= blogsList[blogNumber].blogText %> </p>
+<% } else { %>
+    <h1>No Blog to Show</h1>
+<% } %> 
+<%- include("partials/footer.ejs") %>

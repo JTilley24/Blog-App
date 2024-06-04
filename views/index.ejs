@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<h1>Blogs</h1>
+
+<% if(locals.blogsList) { %>
+    <table>
+        
+    <% for(let i=0; i<blogsList.length; i++){ %>
+        <tr>
+            <td><a href="/blog/<%= i %>"><%= blogsList[i].title %></a></td>
+            <td><a href="/blog/edit/<%= i %>">Edit</a></td>
+            <td><a href="/blog/delete/<%= i %>">Delete</a></td>
+         </tr>
+    <% }%>
+    </table>
+<% }else{ %>
+    <h2>Start creating a blog.</h2>
+<% } %>   
+
+
+
+<%- include("partials/footer.ejs") %>
